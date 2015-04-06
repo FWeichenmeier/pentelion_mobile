@@ -1,0 +1,60 @@
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+    font: 12px/14x Arial, Helvetica, sans-serif;
+    background-color: yellow;
+    color:black;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+header {
+    background-color: white;
+    color:black;
+    text-align:center;
+    padding:5px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+}
+aside {
+    line-height:20px;
+    background-color:#eeeeee;
+    height:600px;
+    width:30%;
+    float:left;
+    padding:5px;
+}
+section {
+    width:100%;
+    height:100%;
+    float:left;
+    padding:0px;
+}
+footer {
+    background-color:white;
+    color:black;
+    text-align:center;
+    padding:5px;
+} 
+
+
+.ruler {
+    color: black;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+td, th {
+    padding: 5px;
+}

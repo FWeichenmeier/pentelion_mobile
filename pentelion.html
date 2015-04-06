@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+		<link rel="stylesheet" href="pentelion.css" />
+
+<body onload="onStart()">
+    <script type="text/javascript" src="pentelion.js"></script>
+
+<h1 id="t1">Pentelion</h1>
+<p>Angreifer:
+<input id="KG" type="range" class="ruler" min="0" max="300" step="10" value="100" onchange='processValues("KGtext", "KG")'/> 
+<input id="KGtext" class="ruler" type="text" size="3" onkeyup='processValues("KG", "KGtext")'/>                          
+</p>
+<p>Verteidiger:
+<input id="VG" type="range" class="ruler" min="0" max="300" step="10" value= "100" onchange='processValues("VGtext", "VG")'/>
+<input id="VGtext" class="ruler"  type="text" size="3" onkeyup='processValues("VG", "VGtext")'/> 
+</p> 
+<p>Schaden:
+<input id="SK" class="ruler" type="range" min="0" max="10" step="1" value= "3" onchange='processValues("SKtext", "SK")'/>
+<input id="SKtext" class="ruler" type="text" size="3" onkeyup='processValues("SK", "SKtext")'/> 
+</p> 
+<p>Rüstung Verteidiger:
+     <select id="RK" size="1" onchange='processValues("RKtext", "RK")'>
+<option value="0">Ohne Rüstung</option>
+<option value="1">Stoff</option>
+<option value="3">Brigandine</option>
+<option value="5">Kette</option>
+<option value="7">Platte</option>
+</select>
+<input id="RKtext" class="ruler" type="text" size="3"/> 
+    </p>
+    <div id="table"></div>
+</body>
+</html>
