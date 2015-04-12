@@ -1,3 +1,24 @@
+function fighter(OG, DG, Weapon, SK, armor, RBr){
+    this.OG = OG;
+    this.DG = DG;
+    this.Weapon = Weapon;
+    this.SK = SK;
+    this.armor = armor;
+    this.RBr = RBr;
+    
+    this.toHTML: function(suffix) {
+        $("#OG" + suffix).text = this.OG;
+        $("#DG" + suffix).text = this.DG;
+        $("#Weapon" + suffix).text = this.Weapon;   
+        return this;
+        
+
+    }
+}
+
+var myFighter = new fighter(180, 180, "Schwert", 6, "SL", 5);
+var foe = new fighter(120, 120, "Krs", 4, "Br", 5);
+
 function calcValues(sg, vg, sk) {
     "use strict";
     var res = [],
@@ -35,15 +56,15 @@ function calculate() {
 
 function processValues(el1, el2) {
     "use strict";
-    document.getElementById(el1).value = document.getElementById(el2).value;
     calculate();
 }
 
+
+
 function onStart() {
     "use strict";
-    document.getElementById("KGtext").value = document.getElementById("KG").value;
-    document.getElementById("VGtext").value = document.getElementById("VG").value;
-    document.getElementById("SKtext").value = document.getElementById("SK").value;
-    calculate();
+    myFighter.toHTML("self");
+
+//    calculate();
 }
 
